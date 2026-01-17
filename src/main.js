@@ -44,6 +44,7 @@ form.addEventListener('submit', e => {
                     message: 'Sorry, there are no images matching your search query. Please try again!',
                 });
                 }, 1000);
+                input.value = '';
             } else {
                 setTimeout(() => {  
                     createGallery(img); 
