@@ -24,19 +24,15 @@ form.addEventListener('submit', e => {
         return;
     }
         
-        
+    showLoader();  
     clearGallery();
-
 
     getImagesByQuery(query)
         .then(result => {
-            const img = result.data.hits;
+            const img = result.hits;
 
             if (img.length === 0) {
-                setTimeout(() => {  
-                    showLoader();
-                }, 1000);
-
+                
                 setTimeout(() => {  
                     iziToast.error({
                     position: 'topRight',
@@ -46,9 +42,9 @@ form.addEventListener('submit', e => {
                 }, 1000);
                 input.value = '';
             } else {
+                
                 setTimeout(() => {  
                     createGallery(img); 
-                    showLoader();
                     input.value = '';
                 }, 1000);
                 // createGallery(img);
@@ -57,7 +53,6 @@ form.addEventListener('submit', e => {
             }
         })
         .catch(error => {
-            hideLoader();
                 iziToast.error({
                 position: 'topRight',
                 message: 'Sorry',

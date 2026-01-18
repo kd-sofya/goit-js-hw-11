@@ -94,8 +94,13 @@ body{
   padding: 12px 14px;
   background: #bb8d48;
   display: flex;
-  flex-wrap: wrap;
   gap: 8px;
+}
+
+.card-body-title{
+  display: flex;
+  margin: 0 auto;
+  gap: 10px;
 }
 
 
@@ -103,7 +108,7 @@ body{
   font-size: 13px;
   color: #444;
   background: antiquewhite;
-  padding: 4px 8px;
+  padding: 4px 20px;
   border-radius: 6px;
   margin: 0;
 }
@@ -164,3 +169,42 @@ body{
       }
     }
 
+
+
+
+
+
+.icon-like{
+display: block;
+position: relative;
+margin: 5px auto;
+fill: #fe0000;
+}
+
+.icon-eye{
+display: block;
+position: relative;
+margin: 5px auto;
+fill: #000000;
+}
+
+.icon-com{
+display: block;
+position: relative;
+margin: 5px auto;
+fill: #636ed0;
+}
+
+.icon-down{
+display: block;
+position: relative;
+margin: 5px auto;
+fill: #000000;
+}
+
+.span-js-num{
+display: block;
+position: relative;
+margin: 5px auto;
+justify-content: center;
+}

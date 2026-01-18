@@ -11,10 +11,24 @@ export const createGallery = images => {
         <div class="card">
                 <img class="card-image" src="${webformatURL}" alt="${tags}" width="370" height="334"/>
             <div class="card-body">
-                <p class="card-subtitle">Likes❤️: ${likes}</p>
-                <p class="card-subtitle">Views👁️: ${views}</p>
-                <p class="card-subtitle">Comments💬: ${comments}</p>
-                <p class="card-subtitle">Downloads⬇️: ${downloads}</p>
+            <span class="card-body-title">
+                <p class="card-subtitle">       
+                 <svg class="icon-like" width="20" height="20">
+                    <use xlink:href="#icon-heart"></use>
+                </svg> <span class="span-js-num">${likes}</span></p>
+                <p class="card-subtitle">               
+                 <svg class="icon-eye" width="20" height="20">
+                    <use xlink:href="#icon-eye"></use>
+                 </svg> <span class="span-js-num">${views}</span></p>
+                <p class="card-subtitle">               
+                 <svg class="icon-com" width="20" height="20">
+                    <use xlink:href="#icon-bubbles2"></use>
+                 </svg> <span class="span-js-num">${comments}</span></p>
+                <p class="card-subtitle">               
+                 <svg class="icon-down" width="20" height="20">
+                    <use xlink:href="#icon-cloud-upload"></use>
+                 </svg> <span class="span-js-num">${downloads}</span></p>
+            </span>
             </div>
         </div>
         </a>`
@@ -29,10 +43,11 @@ export const clearGallery = () => {
   gallery.innerHTML = '';
 };
 
-export const showLoader = () => {
+export const hideLoader = () => {
 loader.classList.add('hidden');
 };
 
-export const hideLoader = () => {
+export const showLoader = () => {
 loader.classList.remove('hidden');
 };
+
